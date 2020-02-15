@@ -40,7 +40,7 @@
         "symfony/polyfill-php56": "*"
     },
     "scripts": {
-        "container": "docker-compose exec app /var/www/bin/console",
+        "container": "docker-compose exec -T app /var/www/bin/console",
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
