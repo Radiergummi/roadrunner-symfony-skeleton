@@ -49,6 +49,9 @@ COPY --from=builder /tmp/rr/rr /usr/local/bin/rr
 COPY php.ini /usr/local/etc/php/php.ini
 
 # Copy the application files
+# You should add additional folders (templates, translations, assets etc.) to
+# this list. Take care of the order you add things in: Put those directories
+# that change most often to the bottom of the list.
 COPY ./bin /var/www/bin
 COPY ./public /var/www/public
 COPY ./vendor /var/www/vendor

@@ -14,7 +14,7 @@ http:
 # static files
 static:
     # root directory for static file (HTTP would not serve .php and .htaccess files).
-    dir:   "/var/www/public"
+    dir: "/var/www/public"
 
 # prometheus metrics
 metrics:
