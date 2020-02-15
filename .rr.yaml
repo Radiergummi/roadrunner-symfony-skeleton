@@ -8,8 +8,8 @@ http:
         # start the roadrunner worker. this is required.
         command: "php bin/console baldinof:roadrunner:worker"
 
-        # relay all connections to the worker listener. this is required.
-        relay:    "tcp://0.0.0.0:7000"
+        # relay all connections to the worker socket. this is required.
+        relay: "unix:///var/www/var/roadrunner.sock"
 
 # static files
 static:
