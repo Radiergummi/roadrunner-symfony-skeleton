@@ -1,4 +1,5 @@
 {
+    "name": "radiergummi/roadrunner-symfony-skeleton",
     "type": "project",
     "license": "proprietary",
     "require": {
