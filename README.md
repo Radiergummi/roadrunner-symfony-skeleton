@@ -7,7 +7,8 @@ Features
 --------
 The image includes only what's actually required to wire things up. It provides:
 
- - Pre-configured Symfony integration using [baldinof/symfony-roadrunner-bundle](https://github.com/Baldinof/roadrunner-bundle)
+ - Pre-configured Symfony integration using 
+   [baldinof/symfony-roadrunner-bundle](https://github.com/Baldinof/roadrunner-bundle)
  - Automatic worker reloading after each request, so you can live-edit in development
  - Easy configuration: All config files in the project root
  - Working docker-compose development environment, project is mounted into the image
