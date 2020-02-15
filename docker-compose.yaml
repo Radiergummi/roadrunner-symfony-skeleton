@@ -9,7 +9,7 @@ services:
             - ./:/var/www
         ports:
             # Web server
-            - 8000:80
+            - 8080:80
 
             # Prometheus metrics
             - 2112:2112
