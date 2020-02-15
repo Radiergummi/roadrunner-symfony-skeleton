@@ -53,6 +53,7 @@ COPY ./vendor /var/www/vendor
 COPY ./config /var/www/config
 COPY ./src /var/www/src
 COPY ./var /var/www/var
+COPY ./.env /var/www/.env
 
 # Change the working directory to the web files
 WORKDIR /var/www
