@@ -35,10 +35,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # See below for a list of other available extensions:
 # https://gist.github.com/giansalex/2776a4206666d940d014792ab4700d80
 
+# The sockets extension is required for the roadrunner bridge to work
+RUN docker-php-ext-install sockets
+
 #RUN docker-php-ext-install opcache
 #RUN docker-php-ext-install pdo
 #RUN docker-php-ext-install pdo_mysql
-#RUN docker-php-ext-install sockets
 
 # Copy the roadrunner binary
 COPY --from=builder /tmp/rr/rr /usr/local/bin/rr
