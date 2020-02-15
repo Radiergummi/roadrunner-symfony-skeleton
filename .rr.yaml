@@ -1,0 +1,33 @@
+# http service configuration.
+http:
+    # http host to listen.
+    address: 0.0.0.0:80
+
+    # http worker pool configuration.
+    workers:
+        # start the roadrunner worker. this is required.
+        command: "php bin/console baldinof:roadrunner:worker"
+
+        # relay all connections to the worker listener. this is required.
+        relay:    "tcp://0.0.0.0:7000"
+
+# static files
+static:
+    # root directory for static file (HTTP would not serve .php and .htaccess files).
+    dir:   "/var/www/public"
+
+# prometheus metrics
+metrics:
+    # prometheus client address (path /metrics added automatically)
+    address: 0.0.0.0:2112
+    collect:
+        app_metric:
+            type:    histogram
+            help:    "Custom application metric"
+            labels:  ["type"]
+            buckets: [0.1, 0.2, 0.3, 1.0]
+
+# health service configuration
+health:
+    # http host to serve health requests.
+    address: 0.0.0.0:2113

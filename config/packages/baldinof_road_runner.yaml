@@ -1,0 +1,27 @@
+baldinof_road_runner:
+
+    # The kernel is preserved between requests. If you want to reboot it, and
+    # use a fresh container on each request you can configure the worker:
+    should_reboot_kernel: false
+
+    # Depending on installed bundle & your configuration, this bundles add
+    # some integrations:
+    #
+    #  - Sentry: configure the request context if the SentryBundle is installed
+    #  - Sessions: add the session cookie to the PSR response (if
+    #    `framework.sessions.enabled` config is true)
+    #  - Doctrine Mongo Bundle: call clear() on all opened manager after each
+    #    request (not needed for regular doctrine bundle).
+    #
+    # Default integrations can be disabled:
+    #default_integrations: false
+
+    # You can use middlewares to manipulate PSR request & responses. Middlewares
+    # can implements either PSR MiddlewareInterface or
+    # Baldinof\RoadRunnerBundle\Http\IteratorMiddlewareInterface.
+    #
+    # IteratorMiddlewareInterface allows to do work after the response has been
+    # sent to the client, you just have to yield the response instead of
+    # returning it.
+    #middlewares:
+    #   - App\Middleware\YourMiddleware
